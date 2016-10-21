@@ -16,3 +16,7 @@
 !/log/.keep
 /tmp
 /nbproject
+
+# Ignore IDE specific settings
+/.idea
+/.vagrant
