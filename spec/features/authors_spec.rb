@@ -7,4 +7,8 @@ describe "Authors page", :type => :feature do
     expect(page).to have_text("New Author")
   end
 
+  it "should display first name field" do
+    visit new_author_path
+    expect(page).to have_text("First name")
+  end
 end
