@@ -17,7 +17,6 @@ Rails.application.routes.draw do
   #   resources :products
 
   resources :authors
-  get 'authors/new'
 
   # Example resource route with options:
   #   resources :products do
