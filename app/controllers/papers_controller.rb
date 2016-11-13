@@ -2,6 +2,7 @@ class PapersController < ApplicationController
 
   def index
     @paper = Paper.all
+    @paper = @paper.published_in params[:year] if params[:year]
   end
 
   def show

@@ -1,5 +1,6 @@
 class Paper < ActiveRecord::Base
   has_and_belongs_to_many :authors
+  scope :published_in, -> (year) { where("year == ?", year)}
 
   validates :title, presence: true
   validates :venue, presence: true
