@@ -31,6 +31,14 @@
       <%= f.text_field :year %>
     </p>
 
+    <div>
+      <% 5.times do |authornumber| %>
+          <%= f.label "Author #{authornumber + 1}",  for: "paper_author_id_#{authornumber + 1}" %>
+          <%= f.collection_select :author_ids, Author.all, :id, :name, {selected: @paper.author_ids[authornumber], include_blank: '(none)'}, {name: "paper[author_ids][]", id: "paper_author_id_#{authornumber + 1}" } %>
+      <% end %>
+    </div>
+
+
     <p>
       <%= f.label :update_paper %><br>
       <%= f.submit "Update Paper", :id => :update_paper %>
