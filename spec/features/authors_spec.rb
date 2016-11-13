@@ -33,6 +33,12 @@ describe "New authors page", :type => :feature do
     expect(page).to have_text("Last name can't be blank")
   end
 
+  it "should render update author page" do
+    author = create(:author)
+    visit edit_author_path(author)
+    expect(page).to have_text("Update author")
+  end
+
 end
 
 describe "authors list page", :type => :feature do
