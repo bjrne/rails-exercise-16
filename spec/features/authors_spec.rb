@@ -21,9 +21,18 @@ end
 
 describe "New authors page", :type => :feature do
 
-  it "should render new authors page'" do
+  it "should render new authors page" do
     visit new_author_path
     expect(page).to have_text("New Author")
+  end
+
+end
+
+describe "authors list page", :type => :feature do
+
+  it "should display 'Add author' link" do
+    visit authors_path
+    expect(page).to have_text("Add author")
   end
 
 end
