@@ -1,14 +1,17 @@
 <h1>Author</h1>
 <%= form_for :author, url: authors_path do |f| %>
     <p>
-      <%= f.label 'First name: ' + @author.first_name  %><br>
+      <strong>First name: </strong>
+      <%= @author.first_name  %><br>
     </p>
 
     <p>
-      <%= f.label 'Last name: ' + @author.last_name %><br>
+      <strong>Last name: </strong>
+      <%= @author.last_name %><br>
     </p>
 
     <p>
-      <%= f.label 'Homepage: ' + @author.homepage %><br>
+      <strong>Homepage: </strong>
+      <%= @author.homepage %><br>
     </p>
 <% end %>
