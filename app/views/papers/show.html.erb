@@ -1,0 +1,20 @@
+<h1>Paper</h1>
+<%= form_for :paper, url: papers_path do |f| %>
+    <p>
+      <strong>Title: </strong>
+      <%= @paper.title  %><br>
+    </p>
+
+    <p>
+      <strong>Venue: </strong>
+      <%= @paper.venue %><br>
+    </p>
+
+    <p>
+      <strong>Year: </strong>
+      <%= @paper.year %><br>
+    </p>
+
+    <%= link_to 'Edit', edit_paper_path(@paper) %>
+    <%= link_to 'Back', papers_path %>
+<% end %>
