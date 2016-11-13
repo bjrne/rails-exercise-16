@@ -39,6 +39,12 @@ describe "New authors page", :type => :feature do
     expect(page).to have_text("Update author")
   end
 
+  it "should have a destroy button" do
+    author = create(:author)
+    visit authors_path(author)
+    expect(page).to have_text("Destroy")
+  end
+
 end
 
 describe "authors list page", :type => :feature do
