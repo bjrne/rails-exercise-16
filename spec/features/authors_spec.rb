@@ -26,6 +26,13 @@ describe "New authors page", :type => :feature do
     expect(page).to have_text("New Author")
   end
 
+  it "should show an error message if name fields are empty" do
+    visit new_author_path
+    click_button :create_author
+    expect(page).to have_text("First name can't be blank")
+    expect(page).to have_text("Last name can't be blank")
+  end
+
 end
 
 describe "authors list page", :type => :feature do
