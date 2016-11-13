@@ -18,7 +18,7 @@
     <p>
       <strong><%= pluralize(@paper.authors.count, "author") %></strong>
       <% @paper.authors.each do |author| %>
-        <li><%= author %></li>
+        <li><%= author.name %></li>
       <% end %>
     </p>
 
