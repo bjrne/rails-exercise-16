@@ -9,4 +9,11 @@ RSpec.describe AuthorsController, type: :controller do
     end
   end
 
+  describe "GET #index" do
+    it "returns http success" do
+      get :new
+      expect(response).to have_http_status(:success)
+    end
+  end
+
 end
